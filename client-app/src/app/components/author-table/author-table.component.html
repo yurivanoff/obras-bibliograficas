@@ -1,0 +1,24 @@
+<div class="card authorsTable">
+  <div class="card-body">
+    <button type="button" class="btn btn-primary createAuthor" (click)="openModal()">Cadastrar</button>
+    <table class="table table-striped table-bordered">
+      <thead>
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col" style="width: 10%" *ngIf="authors.length">Ações</th>
+      </tr>
+      </thead>
+      <tbody>
+        <td *ngIf="!authors.length"> Nenhum registro localizado</td>
+      <tr *ngFor="let author of authors">
+        <td>{{ author.name }}</td>
+        <td>
+          <span class="table-remove">
+            <button type="button" class="btn btn-danger btn-sm" (click)="removeAuthor(author.id)">Remover</button>
+          </span>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="modal-header">
+  <h4 class="modal-title">Cadastrar novos nomes</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <label for="count">Digite a quantidade de nomes a serem cadastrados:</label>
+  <input type="number" class="form-control" [(ngModel)]="count" name="count" maxlength="2" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" (keyup)="changes()">
+
+  <form #createAuthorForm="ngForm" (ngSubmit)="createAuthors(createAuthorForm)">
+    <fieldset ngModelGroup="inputs" #inputs="ngModelGroup">
+        <div *ngFor="let cell of countArray; let i = index;">
+          <label>Nome:</label>
+          <input type="Text" class="form-control" name="{{'name'+i}}" [ngModel]="name" (input)="inputNameValidator($event)">
+        </div>
+    </fieldset>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-success my-2 my-sm-0" *ngIf="flagButton" type="submit">Salvar</button>
+      <button type="button" class="btn btn-outline-dark" (click)="activeModal.close()">Close</button>
+    </div>
+  </form>
+</div>
+
