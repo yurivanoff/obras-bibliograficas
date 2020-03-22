@@ -1,5 +1,7 @@
 # Obras Bibliográficas
 
+Solução do teste: https://github.com/guideti/obras-bibliograficas/blob/master/TESTE_DOTNET.md
+
 ## Tecnologias utilizadas
 * .NET Core 3.1
 * Angular 8
