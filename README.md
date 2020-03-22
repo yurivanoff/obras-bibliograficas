@@ -12,4 +12,4 @@ Solução do teste: https://github.com/guideti/obras-bibliograficas/blob/master/
 
 * Dentro do diretório `API` executar o comando `dotnet run`. Porta padrão de execução: `http://localhost:5000/`.
 * Ao rodar a API pela primeira vez, será criado o arquivo `authors.db` para armazenamento de dados.
-* Dentro do diretório `client-app`, após instalar as dependências executar o comando `ng serve`. Porta padrão de execução: `http://localhost:5000/`.
+* Dentro do diretório `client-app` instalar as dependências utilizando o comando `npm install` e executar o comando `ng serve`. Porta padrão de execução: `http://localhost:4200/`.
